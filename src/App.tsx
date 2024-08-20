@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import "./App.css";
 import { initSilk } from "@silk-wallet/silk-wallet-sdk";
 import { WagmiConfig, createClient, configureChains, mainnet, goerli } from "wagmi";
@@ -34,6 +34,12 @@ const wagmiClient = createClient({
 });
 
 function App() {
+
+  const value = useMemo(async () => {
+    return 'hi'
+  }, [])
+
+  console.log(value)
 
   useEffect(() => {
     try {
