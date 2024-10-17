@@ -7,6 +7,7 @@ import { publicProvider } from "wagmi/providers/public";
 import { InjectedConnector } from "wagmi/connectors/injected";
 import { WalletConnectConnector } from 'wagmi/connectors/walletConnect';
 import TestComponent from "./TestComponent";
+import Footer from "./components/Footer";
 
 const defaultChains: Chain[] = [mainnet, polygon, gnosis, goerli]
 
@@ -49,6 +50,7 @@ function App() {
     <WagmiConfig client={wagmiClient}>
       <div className="App">
         <TestComponent />
+        <Footer />
       </div>
     </WagmiConfig>
   );
